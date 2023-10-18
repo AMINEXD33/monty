@@ -43,7 +43,8 @@ int main(int argc, char **argv)
 
     fclose(file);
     if (line_buffer)
-        free(line_buffer), free(stack);
+        free(line_buffer);
+    free(stack);
 
     return (EXIT_SUCCESS);
 }

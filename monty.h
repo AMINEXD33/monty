@@ -40,6 +40,7 @@ int main_map(struct stack_s *stack, unsigned int line_number, char **list,  int 
 void EXIT_PROTOCOL(char **list, struct stack_s *stack, unsigned int line_number);
 void EXIT_PROTOCOL2(char **list, struct stack_s *stack, unsigned int line_number);
 int atoi_modified(char **list, struct stack_s *stack, unsigned int line_number);
+void free_list_on_err(char **list);
 /*UPCODE FUNCTIONS*/
 void push_UPCODE(struct stack_s **stack, unsigned int line_number);
 void pall_UPCODE(struct stack_s **stack, unsigned int line_number);

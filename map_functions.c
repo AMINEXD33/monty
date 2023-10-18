@@ -49,7 +49,7 @@ unsigned int line_number, char **list,  int *space_needed)
 *@line_number: the line number in wich the progrogramme is reading
 *@upcode: the upcode str
 */
-void free_list_on_err(char **list, unsigned int line_number, char *upcode)
+void free_list_on_err(char **list)
 {
     if (list != NULL)
     {
@@ -59,8 +59,6 @@ void free_list_on_err(char **list, unsigned int line_number, char *upcode)
             free(list[1]);
         free(list);
     }
-    dprintf(2,"L%d: unknown instruction %s\n",line_number, upcode);
-    exit(EXIT_FAILURE);
 }
 /**
 *atoi_modified- this function handles the problem with the atoi function
@@ -84,7 +82,6 @@ int atoi_modified(
         if ((list[1][x] < '0' || list[1][x] > '9')
         && (list[1][x] != '+' && list[1][x] != '-'))
         {
-            printf("HERE!\n");
             EXIT_PROTOCOL(list, stack, line_number);
         }
         /*if a numeric char is detected, break*/
@@ -108,7 +105,7 @@ void EXIT_PROTOCOL(
     {
         if (list[0] != NULL)
             free(list[0]);
-        if (list[0] != NULL)
+        if (list[1] != NULL)
             free(list[1]);
         free(list);
     }
@@ -131,7 +128,7 @@ void EXIT_PROTOCOL2(
     {
         if (list[0] != NULL)
             free(list[0]);
-        if (list[0] != NULL)
+        if (list[1] != NULL)
             free(list[1]);
         free(list);
     }
