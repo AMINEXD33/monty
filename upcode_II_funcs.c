@@ -20,7 +20,7 @@ void add_UPCODE(stack_t **stack, unsigned int line_number, int val)
 	{
 		result += (*stack)->n;
 		result += (*stack)->next->n;
-		printf("%d\n", result);
+		printf("%ld\n", result);
 	}
 	val = val;
 }
