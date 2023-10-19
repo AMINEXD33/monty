@@ -62,6 +62,11 @@ void pint_UPCODE(stack_t **stack, unsigned int line_number, int val)
 {
 	if ((*stack) != NULL)
 		printf("%d\n", (*stack)->n);
+	else
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	line_number = line_number;
 	val = val;
 }
@@ -82,8 +87,38 @@ void pop_UPCODE(stack_t **stack, unsigned int line_number, int val)
 		stack2 = (*stack)->next;
 		free(node);
 	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 	/*NOT USED*/
 	line_number = line_number;
 	val = val;
 
+}
+/**
+ *swap_UPCODE- swap the values of the two node at the top of the stack
+ *@stack: the stack
+ *@line_number: the line in wich the programme is currentlly reading
+ *@val: the val of the a node (not used)
+ */
+void swap_UPCODE(stack_t **stack, unsigned int line_number, int val)
+{
+	int tmp = 0;
+
+	if ((*stack) == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		tmp = (*stack)->n;
+		(*stack)->n = (*stack)->next->n;
+		(*stack)->next->n = tmp;
+	}
+
+
+	val = val;
 }
