@@ -56,5 +56,6 @@ void pop_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void swap_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void add_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void nop_UPCODE(stack_t **stack, unsigned int line_number, int val);
+void sub_UPCODE(stack_t **stack, unsigned int line_number, int val);
 
 #endif /*_MONTY_H*/
