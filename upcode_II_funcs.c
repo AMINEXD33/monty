@@ -9,7 +9,7 @@
  */
 void add_UPCODE(stack_t **stack, unsigned int line_number, int val)
 {
-	int result = 0;
+	unsigned long int result = 0;
 
 	if ((*stack) == NULL || (*stack)->next == NULL)
 	{
