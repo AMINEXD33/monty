@@ -58,19 +58,13 @@ void sub_UPCODE(stack_t **stack, unsigned int line_number, int val)
 		exit(EXIT_FAILURE);
 	}
 	/*get vals*/
-	a = (*stack)->n;
-	b = (*stack)->next->n;
-	printf("a = %d, b = %d\n", a, b);
-	if (b == 0)
-	{
-		fprintf(stderr, "L%d: can't sub, devide by 0\n", line_number);
-		exit(EXIT_FAILURE);
-	}
+	b = (*stack)->n;
+	a = (*stack)->next->n;
 	/*remove top*/
 	tmp = stack2;
 	stack2 = stack2->next;
 	free(tmp);
 	/*add result*/
-	stack2->n = (a / b);
+	stack2->n = (a - b);
 	val = val;
 }
