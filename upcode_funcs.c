@@ -50,7 +50,7 @@ void pall_UPCODE(stack_t **stack, unsigned int line_number, int val)
 	val = val;
 }
 /**
-*print_UPCODE- print the head of the stack
+*pint_UPCODE- print the head of the stack
 *@stack: the stack
 *@line_number:the line in wich the programme is currentlly
 *reading
@@ -64,4 +64,26 @@ void pint_UPCODE(stack_t **stack, unsigned int line_number, int val)
 		printf("%d\n", (*stack)->n);
 	line_number = line_number;
 	val = val;
+}
+/**
+*pop_UPCODE- pop the element on the tope of the stack
+*@stack: the stack
+*@line_number: the number of the line the programe currentlly
+*reading
+*@val: the val of the node
+*
+*/
+void pop_UPCODE(stack_t **stack, unsigned int line_number, int val)
+{
+	stack_t *node = (*stack);
+
+	if ((*stack) != NULL)
+	{
+		stack2 = (*stack)->next;
+		free(node);
+	}
+	/*NOT USED*/
+	line_number = line_number;
+	val = val;
+
 }

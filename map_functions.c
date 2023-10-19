@@ -16,14 +16,15 @@ int main_map(
 {
 	int number = 0;
 	int i;
-	int has_arg[3] = {1, 0, 0};
+	int has_arg[4] = {1, 0, 0, 0};
 	instruction_t map[] = {
 		{"push", push_UPCODE},
 		{"pall", pall_UPCODE},
 		{"pint", pint_UPCODE},
+		{"pop", pop_UPCODE},
 	};
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 4; i++)
 	{
 		if (strcmp(map[i].opcode, list[0]) == 0)
 		{
