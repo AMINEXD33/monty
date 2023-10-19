@@ -49,3 +49,18 @@ void pall_UPCODE(stack_t **stack, unsigned int line_number, int val)
 	line_number = line_number;
 	val = val;
 }
+/**
+*print_UPCODE- print the head of the stack
+*@stack: the stack
+*@line_number:the line in wich the programme is currentlly
+*reading
+*@val: the val of a node (not used here)
+*
+*
+*/
+void pint_UPCODE(stack_t **stack, unsigned int line_number, int val)
+{
+	printf("%d\n", (*stack)->n);
+	line_number = line_number;
+	val = val;
+}

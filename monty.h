@@ -51,5 +51,6 @@ void free_stack(void);
 /*UPCODE FUNCTIONS*/
 void push_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void pall_UPCODE(stack_t **stack, unsigned int line_number, int val);
+void pint_UPCODE(stack_t **stack, unsigned int line_number, int val);
 
 #endif /*_MONTY_H*/
