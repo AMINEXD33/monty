@@ -60,7 +60,8 @@ void pall_UPCODE(stack_t **stack, unsigned int line_number, int val)
 */
 void pint_UPCODE(stack_t **stack, unsigned int line_number, int val)
 {
-	printf("%d\n", (*stack)->n);
+	if ((*stack) != NULL)
+		printf("%d\n", (*stack)->n);
 	line_number = line_number;
 	val = val;
 }
