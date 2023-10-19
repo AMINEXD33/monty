@@ -24,3 +24,16 @@ void add_UPCODE(stack_t **stack, unsigned int line_number, int val)
 	}
 	val = val;
 }
+/**
+ *nop_UPCODE- this function does nothing
+ *@stack: the stack
+ *@line_number: the line in wich the programe is reading
+ *currentlly
+ *@val: the value of the node
+ */
+void nop_UPCODE(stack_t **stack, unsigned int line_number, int val)
+{
+	(*stack) = (*stack);
+	line_number = line_number;
+	val = val;
+}
