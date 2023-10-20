@@ -38,7 +38,7 @@ void mod_UPCODE(stack_t **stack, unsigned int line_number, int val)
 	val = val;
 }
 /**
- *add_UPCODE- add the two top elements and print the result
+ *add_UPCODE- print the char representation of the top element in stack
  *@stack: the stack
  *@line_number: the line number the programe is curentlly reading
  *@val: the value of the node (NOT USED)
@@ -63,4 +63,38 @@ void pchar_UPCODE(stack_t **stack, unsigned int line_number, int val)
         }
 	}
 	val = val;
+}
+/**
+ *pstr_UPCODE- print the char representation of every node in the stack
+ * top to bottom
+ *@stack: the stack
+ *@line_number: the line number the programe is curentlly reading
+ *@val: the value of the node (NOT USED)
+ */
+void pstr_UPCODE(stack_t **stack, unsigned int line_number, int val)
+{
+    stack_t *head = (*stack);
+	if ((*stack) == NULL)
+	{
+        printf("\n");
+        return;
+	}
+	else
+	{
+        while (head != NULL)
+        {
+            if (head->n <= 0 || head->n > 127)
+            {
+                return;
+            }
+            else
+            {
+                printf("%c", (char)head->n);
+            }
+            head = head->next;
+        }
+        printf("\n");
+	}
+	val = val;
+    line_number = line_number;
 }

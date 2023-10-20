@@ -16,7 +16,8 @@ int main_map(
 {
 	int number = 0;
 	int i;
-	int has_arg[12] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	int has_arg[13] = {1, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0};
 	instruction_t map[] = {
 		{"push", push_UPCODE},
 		{"pall", pall_UPCODE},
@@ -30,9 +31,10 @@ int main_map(
 		{"mul", mul_UPCODE},
 		{"mod", mod_UPCODE},
 		{"pchar", pchar_UPCODE},
+		{"pstr", pstr_UPCODE},
 	};
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 	{
 		if (strcmp(map[i].opcode, list[0]) == 0)
 		{
