@@ -37,3 +37,30 @@ void mod_UPCODE(stack_t **stack, unsigned int line_number, int val)
 	stack2->n = (a % b);
 	val = val;
 }
+/**
+ *add_UPCODE- add the two top elements and print the result
+ *@stack: the stack
+ *@line_number: the line number the programe is curentlly reading
+ *@val: the value of the node (NOT USED)
+ */
+void pchar_UPCODE(stack_t **stack, unsigned int line_number, int val)
+{
+	if ((*stack) == NULL)
+	{
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+        if ((*stack)->n < 0 || (*stack)->n > 127)
+        {
+            fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+		    exit(EXIT_FAILURE);
+        }
+        else
+        {
+            printf("%c\n", (char)(*stack)->n);
+        }
+	}
+	val = val;
+}

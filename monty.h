@@ -60,5 +60,6 @@ void sub_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void div_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void mul_UPCODE(stack_t **stack, unsigned int line_number, int val);
 void mod_UPCODE(stack_t **stack, unsigned int line_number, int val);
+void pchar_UPCODE(stack_t **stack, unsigned int line_number, int val);
 
 #endif /*_MONTY_H*/
